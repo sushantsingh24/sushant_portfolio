@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+{%load static%}
+{%block contant%}
+<button type="submit">logout</button>
+
+<body>
+    <div class="forms">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label>UserName:- <input type="text" name="username" placeholder="Enter your name"></label>
+            <label for="numbers">Mobile No:-
+                <select id="numbers">
+                    <option value="+91">+91</option>
+                    <option value="+92">+92</option>
+                    <option value="+64">+64</option>
+                    <option value="+85">+85</option>
+                    <option value="+63">+63</option>
+                    <option value="+71">+71</option>
+                </select><input type="text" placeholder="Enter your mobile No" name="number" id="numbers"></label>
+
+            <label>Email id:- <input type="email" name="email" placeholder="Enter your email id"></label>
+            <label>Password:- <input type="password" name="password" placeholder="Enter your password"></label>
+            <label>Confirm Password:- <input type="password" name="cpassword"
+                    placeholder="Enter your confirm password"></label>
+            <button type="submit">signup</button>
+        </form>
+    </div>
+</body>
+
+</html>
+{%endblock%}
